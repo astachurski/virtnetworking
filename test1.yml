@@ -1,0 +1,6 @@
+- name: test name
+  hosts: asus
+  tasks:
+      - name: install nginx
+        apt: name=nginx update_cache=no
+  
