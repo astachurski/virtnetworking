@@ -1,6 +1,13 @@
-- name: test name
-  hosts: asus
+- name: Install nginx on AWS dupa1 dupa2
+  hosts: awsdupa
+  sudo: True
   tasks:
       - name: install nginx
-        apt: name=nginx update_cache=no
+        yum: name=nginx
+
+      - name: start nginx
+        service: name=nginx state=restarted
+        
+
+        
   
